@@ -272,12 +272,13 @@ void Adafruit_INA219::readDevice(){
 String Adafruit_INA219::toString(){
 
     String str = "[" 
-    + String(this->busVoltage) + "," 
-    + this->current_mA + ","
-    + this->power_mW + ","
-    + this->online + ","
-    + this->overCurrent + ","
-    + this->overVoltage + ","
+    + String(this->busVoltage,3) + "," 
+    + String(this->current_mA,3) + ","
+    + String(this->power_mW,3) + ","
+    // + String(this->online) + ","  // use to indicate that device is online
+    + String(this->overCurrent) + ","
+    + String(this->overVoltage) + ","
     + "]";
     return String(str);
+}
 }
