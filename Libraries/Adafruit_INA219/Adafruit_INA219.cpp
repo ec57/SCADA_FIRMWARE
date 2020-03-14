@@ -281,4 +281,3 @@ String Adafruit_INA219::toString(){
     + "]";
     return String(str);
 }
-}
