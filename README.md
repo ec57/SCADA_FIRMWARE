@@ -6,3 +6,5 @@ SETUP:  Enter 'https://dl.espressif.com/dl/package_esp32_index.json' into the â€
 LIBRARIES:  Place the following libraries in the Arduino IDE 'Libraries' folder: Adafruit_INA219, AuxillaryVoltageArray, DigitalPorts, FaBoRTC_PCF2129
 
 CODE:  Place the 'SCADA_WORKBENCH_2.ino' file inside a folder named 'SCADA_WORKBENCH_2' inside the 'Arduino' folder in 'Documents' folder.
+
+Documentation: Please download the SoftwareDocumentation.zip file, unzip it, and run: index.html
