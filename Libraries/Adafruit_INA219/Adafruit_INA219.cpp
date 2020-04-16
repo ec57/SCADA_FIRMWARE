@@ -227,7 +227,7 @@ float Adafruit_INA219::getShuntVoltage_mV() {
  */
 float Adafruit_INA219::getBusVoltage_V() {
     int16_t value = getBusVoltage_raw();
-	if (value < 0.080){
+	if (value < 80 && valueDec > 0){
 		value = 0;
 	}
 		
@@ -243,6 +243,9 @@ float Adafruit_INA219::getBusVoltage_V() {
 float Adafruit_INA219::getCurrent_mA() {
     float valueDec = getCurrent_raw();
 	valueDec *= ina219_currentLSB; 
+	if(valueDec < 0.004 && valueDec > -0.004){
+		valueDec = 0;
+	}
     return valueDec;
 }
 
