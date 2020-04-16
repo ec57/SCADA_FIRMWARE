@@ -227,6 +227,10 @@ float Adafruit_INA219::getShuntVoltage_mV() {
  */
 float Adafruit_INA219::getBusVoltage_V() {
     int16_t value = getBusVoltage_raw();
+	if (value < 0.080){
+		value = 0;
+	}
+		
     return value *0.001; // basic conversion to V
 }
 
